@@ -1,0 +1,359 @@
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/oswaldregular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/oswaldmedium.woff2") format("woff2");
+  font-display: swap;
+}
+body {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  margin: 0 auto;
+}
+
+a {
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.title {
+  margin: 0;
+  font-weight: 400;
+  color: inherit;
+  line-height: 1;
+}
+.title--l {
+  font-size: 36px;
+}
+.title--m {
+  font-size: 24px;
+}
+
+.button {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #68b738;
+}
+
+.main-header {
+  background-color: #ffffff;
+  padding: 10px 20px 17px 20px;
+}
+
+.main-navigation {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.intro {
+  position: relative;
+  padding: 20px 35px 10px 35px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  color: #ffffff;
+  background-image: url("../img/background-cat.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 302px;
+  background-color: #68b738;
+}
+.intro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  height: 302px;
+  background-color: #68b738;
+  opacity: 0.85;
+}
+
+.intro__wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.intro__title {
+  margin-bottom: 25px;
+}
+
+.intro__slogan {
+  margin: 0;
+  margin-bottom: 302px;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.programs {
+  padding: 10px 20px 10px 20px;
+}
+
+.programs__list {
+  margin: 0;
+  padding: 0;
+}
+
+.programs__card {
+  padding: 30px 33px 18px 20px;
+  margin-bottom: 10px;
+  background-color: #f2f2f2;
+  list-style: none;
+}
+
+.programs__card-title {
+  padding-bottom: 29px;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+
+.programs__card-text {
+  margin: 0;
+  padding-bottom: 38px;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+}
+
+.programs__card-link {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.about {
+  padding: 10px 20px 49px 20px;
+}
+
+.about__list {
+  margin: 0;
+  margin-top: 42px;
+  padding: 0;
+  list-style: none;
+}
+
+.about__list-item {
+  padding-bottom: 24px;
+}
+
+.about__list-item-text {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+}
+
+.example {
+  padding: 25px 20px 40px 20px;
+  background-color: #f2f2f2;
+}
+
+.example__text {
+  margin: 0;
+  margin-top: 40px;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+}
+
+.example__result-title {
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 100%;
+  color: #444444;
+}
+
+.example__result-data {
+  margin: 0;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.example__price {
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.main-footer__cooperation {
+  padding: 26px 20px;
+}
+
+.main-footer__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.main-footer__address {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #444444;
+  font-style: normal;
+}
+
+.main-footer__map {
+  width: 320px;
+  height: 362px;
+  background-image: url("../img/map.jpg");
+  background-size: cover;
+}
+
+.contacts {
+  padding: 40px 20px 22px 20px;
+  background-color: #f2f2f2;
+}
+
+.contacts__social-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog {
+  padding: 27px 20px 25px 20px;
+}
+
+.card-product {
+  list-style: none;
+}
+
+.card-product__title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #222222;
+  text-transform: uppercase;
+}
+
+.card-product__description,
+.card-product__text {
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #444444;
+}
+
+.additional-products {
+  padding: 25px 20px 20px 20px;
+}
+
+.additional-products__list {
+  list-style: none;
+}
+
+.additional-products__subtitle {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #222222;
+  text-transform: uppercase;
+}
+
+.additional-products__description,
+.additional-products__price {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  color: #444444;
+}
+
+.banner {
+  padding: 35px 20px;
+}
+
+.banner__text {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.main-container {
+  padding: 27px 20px 32px 20px;
+}
+
+.main-container__text {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.form {
+  margin-top: 40px;
+}
+
+.form__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: none;
+}
+
+.input-group {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #222222;
+}
+.input-group--grey {
+  color: #444444;
+}
+
+.input-group__input-text,
+.input-group__input-text::placeholder {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: inherit;
+  color: inherit;
+}
+/*# sourceMappingURL=style.css.map */
