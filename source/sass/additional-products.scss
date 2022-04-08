@@ -1,0 +1,24 @@
+.additional-products {
+  padding: 25px 20px 20px 20px;
+}
+
+.additional-products__list {
+  list-style: none;
+}
+
+.additional-products__subtitle {
+  font-family: $font-oswald;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: $color-dark-grey-2;
+  text-transform: uppercase;
+}
+
+.additional-products__description,
+.additional-products__price {
+  font-family: $font-arial;
+  font-size: 14px;
+  line-height: 14px;
+  color: $color-dark-grey;
+}
