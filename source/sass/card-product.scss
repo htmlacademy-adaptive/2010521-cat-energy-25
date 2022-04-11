@@ -1,0 +1,19 @@
+.card-product {
+  list-style: none;
+}
+
+.card-product__title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-dark-grey-2;
+  text-transform: uppercase;
+}
+
+.card-product__description,
+.card-product__text {
+  font-family: $font-arial;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-dark-grey;
+}

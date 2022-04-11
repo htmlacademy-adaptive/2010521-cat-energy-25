@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -19,7 +20,7 @@
             <a href="index.html">Главная</a>
           </li>
           <li class="navigation-list__item navigation-list__item--active">
-            <a href="catalog.html">Каталог продукции</a>
+            <a>Каталог продукции</a>
           </li>
           <li class="navigation-list__item">
             <a href="form.html">Подбор программы</a>
@@ -29,11 +30,11 @@
     </header>
     <main class="main-container">
       <section class="catalog">
-        <h1 class="catalog__title title-l">Каталог продукции</h1>
+        <h1 class="catalog__title title title--l">Каталог продукции</h1>
         <ul class="catalog__cards">
           <li class="catalog__card-product card-product">
             <a class="card-product__link" href="#">
-              <img class="card-product__image" src="img/catalog-card_1.png" width="68" height="86" alt="Баночка корма Cat energy">
+              <img class="card-product__image" src="img/catalog-card-1.png" width="68" height="86" alt="Баночка корма Cat energy">
               <h3 class="card-product__title">Cat Energy PRO 500 г</h3>
             </a>
             <dl class="card-product__description">
@@ -48,7 +49,7 @@
           </li>
           <li class="catalog__card-product card-product">
             <a class="card-product__link" href="#">
-              <img class="card-product__image" src="img/catalog-card_1.png" width="68" height="86" alt="Баночка корма Cat energy">
+              <img class="card-product__image" src="img/catalog-card-1.png" width="68" height="86" alt="Баночка корма Cat energy">
               <h3 class="card-product__title">Cat Energy PRO 1000 г</h3>
             </a>
             <dl class="card-product__description">
@@ -63,7 +64,7 @@
           </li>
           <li class="catalog__card-product card-product">
             <a class="card-product__link" href="#">
-              <img class="card-product__image" src="img/catalog-card_1.png" width="68" height="86" alt="Баночка корма Cat energy">
+              <img class="card-product__image" src="img/catalog-card-1.png" width="68" height="86" alt="Баночка корма Cat energy">
               <h3 class="card-product__title">Cat Energy PRO 500 г</h3>
             </a>
             <dl class="card-product__description">
@@ -78,7 +79,7 @@
           </li>
           <li class="catalog__card-product card-product">
             <a class="card-product__link" href="#">
-              <img class="card-product__image" src="img/catalog-card_1.png" width="68" height="86" alt="Баночка корма Cat energy">
+              <img class="card-product__image" src="img/catalog-card-1.png" width="68" height="86" alt="Баночка корма Cat energy">
               <h3 class="card-product__title">Cat Energy PRO 1000 г</h3>
             </a>
             <dl class="card-product__description">
@@ -93,7 +94,7 @@
           </li>
           <li class="catalog__card-product card-product">
             <a class="card-product__link" href="#">
-              <img class="card-product__image" src="img/catalog-card_1.png" width="68" height="86" alt="Баночка корма Cat energy">
+              <img class="card-product__image" src="img/catalog-card-1.png" width="68" height="86" alt="Баночка корма Cat energy">
               <h3 class="card-product__title">Cat Energy slim 500 г</h3>
             </a>
             <dl class="card-product__description">
@@ -108,7 +109,7 @@
           </li>
           <li class="catalog__card-product card-product">
             <a class="card-product__link" href="#">
-              <img class="card-product__image" src="img/catalog-card_1.png" width="68" height="86" alt="Баночка корма Cat energy">
+              <img class="card-product__image" src="img/catalog-card-1.png" width="68" height="86" alt="Баночка корма Cat energy">
               <h3 class="card-product__title">Cat Energy slim 1000 г</h3>
             </a>
             <dl class="card-product__description">
@@ -123,7 +124,7 @@
           </li>
           <li class="catalog__card-product card-product">
             <a class="card-product__link" href="#">
-              <img class="card-product__image" src="img/catalog-card_1.png" width="68" height="86" alt="Баночка корма Cat energy">
+              <img class="card-product__image" src="img/catalog-card-1.png" width="68" height="86" alt="Баночка корма Cat energy">
               <h3 class="card-product__title">Cat Energy slim 500 г</h3>
             </a>
             <dl class="card-product__description">
@@ -144,7 +145,7 @@
         </ul>
       </section>
       <section class="additional-products">
-        <h2 class="additional-products__title">Дополнительные товары</h2>
+        <h2 class="additional-products__title title title--m">Дополнительные товары</h2>
         <ul class="additional-products__list">
           <li class="additional-products__item">
             <h3 class="additional-products__subtitle">Сахарозаменитель</h3>
@@ -178,25 +179,25 @@
       </div>
     </main>
     <footer class="main-footer">
-      <section class="main-footer__cooperation cooperation">
-        <h2 class="cooperation__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <p class="cooperation__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-        <div class="cooperation__map"></div>
+      <section class="main-footer__cooperation">
+        <h2 class="main-footer__title">Приглашаем к сотрудничеству дилеров!</h2>
+        <address class="main-footer__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       </section>
+      <div class="main-footer__map"></div>
       <section class="main-footer__contacts contacts">
         <h2 class="visually-hidden">Социальные сети</h2>
-        <a class="contacts__logo logo" href="index.html">
+        <a class="contacts__logo logo">
           <img class="logo__text" src="img/logo-text-mobile.svg" width="101" height="18" alt="Кэт энерджи">
         </a>
-        <ul class="contacts__social-list social-contacts">
-          <li class="social-contacts__item">
-            <a class="social-contacts__link social-contacts__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+        <ul class="contacts__social-list">
+          <li class="contacts__social-item">
+            <a class="contacts__social-link contacts__social-link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
           </li>
-          <li class="social-contacts__item">
-            <a class="social-contacts__link social-contacts__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в Ютубе</a>
+          <li class="contacts__social-item">
+            <a class="contacts__social-link contacts__social-link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в Ютубе</a>
           </li>
-          <li class="social-contacts__item">
-            <a class="social-contacts__link social-contacts__link--telegram" href="https://t.me/htmlacademy">Мы в Телеграме</a>
+          <li class="contacts__social-item">
+            <a class="contacts__social-link contacts__social-link--telegram" href="https://t.me/htmlacademy">Мы в Телеграме</a>
           </li>
         </ul>
         <div class="contacts__copyright copyright">

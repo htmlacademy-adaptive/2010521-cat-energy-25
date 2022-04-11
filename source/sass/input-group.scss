@@ -1,0 +1,20 @@
+.input-group {
+  font-family: $font-oswald;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $color-dark-grey-2;
+
+  &--grey {
+    color: $color-dark-grey;
+  }
+}
+
+.input-group__input-text,
+.input-group__input-text::placeholder {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: inherit;
+  color: inherit;
+}
