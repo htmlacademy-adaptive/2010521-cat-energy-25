@@ -1,0 +1,47 @@
+.main-font {
+  margin: 0;
+  font-weight: 400;
+  color: inherit;
+  line-height: 1;
+
+  &--l {
+    font-size: 36px;
+  }
+
+  &--m {
+    font-size: 24px;
+  }
+
+  &--s {
+    font-size: 16px;
+  }
+
+  &--xs {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-font {
+    margin: 0;
+    font-weight: 400;
+    color: inherit;
+    line-height: 1;
+
+    &--l {
+      font-size: 60px;
+    }
+
+    &--m {
+      font-size: 36px;
+    }
+
+    &--s {
+      font-size: 20px;
+    }
+
+    &--xs {
+      font-size: 20px;
+    }
+  }
+}

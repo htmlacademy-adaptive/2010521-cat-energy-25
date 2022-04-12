@@ -1,0 +1,16 @@
+.main-navigation {
+  display: none;
+  background-color: $color-white;
+}
+
+@media (min-width: $tablet-width) {
+  .main-navigation {
+    display: block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-navigation {
+    background-color: transparent;
+  }
+}
