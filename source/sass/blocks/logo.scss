@@ -1,0 +1,17 @@
+.logo {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.logo__text {
+  margin-left: auto;
+  margin-right: 65px;
+}
+
+@media (min-width: $tablet-width) {
+  .logo__text {
+    margin: 0;
+    margin-left: 12px;
+  }
+}

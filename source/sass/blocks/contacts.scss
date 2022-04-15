@@ -1,0 +1,22 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 22px 20px;
+  background-color: $color-grey;
+}
+
+.contacts__social-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 58px 30px 55px;
+  }
+}

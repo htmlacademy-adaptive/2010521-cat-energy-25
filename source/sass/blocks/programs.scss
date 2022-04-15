@@ -1,0 +1,89 @@
+.programs {
+  padding: 10px 20px;
+}
+
+.programs__list {
+  display: grid;
+  row-gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.programs__card {
+  padding: 30px 33px 18px 20px;
+  background-color: $color-grey;
+  list-style: none;
+}
+
+.programs__card-title {
+  padding-bottom: 29px;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+
+.programs__card-text {
+  margin: 0;
+  padding-bottom: 42px;
+  font-family: $font-arial;
+  line-height: 18px;
+  color: $color-dark-grey;
+}
+
+.programs__card-link {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .programs {
+    padding: 0 30px 45px;
+  }
+
+  .programs__list {
+    row-gap: 30px;
+  }
+
+  .programs__card {
+    padding: 77px 316px 53px 52px;
+  }
+
+  .programs__card-title {
+    padding-bottom: 24px;
+    line-height: 36px;
+  }
+
+  .programs__card-text {
+    padding-bottom: 52px;
+    color: $color-black;
+  }
+
+  .programs__card-link {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programs {
+    padding: 0 110px 71px;
+  }
+
+  .programs__list {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+  }
+
+  .programs__card {
+    padding: 77px 51px 59px;
+  }
+
+  .programs__card-title {
+    padding-bottom: 73px;
+  }
+
+  .programs__card-text {
+    padding-bottom: 27px;
+  }
+}
