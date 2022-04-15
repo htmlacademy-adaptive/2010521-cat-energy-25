@@ -32,7 +32,7 @@
 @media (min-width: $tablet-width) {
   .main-header {
     display: flex;
-    padding: 24px 30px;
+    padding: 25px 30px 0;
   }
 
   .main-header__menu-toggle {
@@ -42,7 +42,7 @@
 
 @media (min-width: $desktop-width) {
   .main-header {
-    padding: 55px 110px 29px;
+    padding: 54px 110px 0;
     background-color: transparent;
   }
 

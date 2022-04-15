@@ -2,111 +2,113 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo logo" href="index.html">
-        <img class="logo__image" src="img/logo-image-mobile.svg" width="33" height="38" alt="Логотип">
-        <img class="logo__text" src="img/logo-text-mobile.svg" width="101" height="18" alt="Кэт энерджи">
+      <a class="main-header__logo logo">
+        <img class="main-header__logo-image logo__image" src="img/logo-image-mobile.svg" width="33" height="38" alt="Логотип">
+        <img class="main-header__logo-text logo__text" src="img/logo-text-mobile.svg" width="101" height="18" alt="Кэт энерджи">
       </a>
-      <nav class="main-navigation">
-        <button class="main-navigation__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+      <button class="main-header__menu-toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <nav class="main-header__navigation main-navigation">
         <ul class="main-navigation__list navigation-list">
-          <li class="navigation-list__item">
-            <a href="index.html">Главная</a>
-          </li>
-          <li class="navigation-list__item">
-            <a href="catalog.html">Каталог продукции</a>
-          </li>
           <li class="navigation-list__item navigation-list__item--active">
-            <a>Подбор программы</a>
+            <a class="navigation-list__link" href="index.html">Главная</a>
+          </li>
+          <li class="navigation-list__item">
+            <a class="navigation-list__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="navigation-list__item">
+            <a class="navigation-list__link">Подбор программы</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="main-container">
       <h1 class="main-container__title main-font main-font--l">Подбор программы</h1>
-      <p class="main-container__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <p class="main-container__text main-font main-font--xs">Заполните анкету, и мы подберем <br>программу питания для вашего кота</p>
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset form__fieldset--half">
           <div class="form__name input-group input-group--grey">
-            <label class="input-group__label" for="form-name-cat">Имя*</label>
-            <input class="input-group__input-text" name="name-cat" placeholder="Барсик" type="text" id="form-name-cat">
+            <label class="input-group__label main-font main-font--s" for="form-name-cat">Имя*</label>
+            <input class="input-group__input-text main-font main-font--s" name="name-cat" placeholder="Барсик" type="text" id="form-name-cat">
           </div>
           <div class="form__name input-group input-group--grey">
-            <label class="input-group__label" for="form-weight">Вес (кг):*</label>
-            <input class="input-group__input-text" name="weight" placeholder="7" type="text" id="form-weight">
+            <label class="input-group__label main-font main-font--s" for="form-weight">Вес (кг):*</label>
+            <input class="input-group__input-text main-font main-font--s" name="weight" placeholder="7" type="text" id="form-weight">
           </div>
           <div class="form__name input-group input-group--grey">
-            <label class="input-group__label" for="form-age">Возраст (лет):</label>
-            <input class="input-group__input-text" name="age" placeholder="7" type="text" id="form-age">
+            <label class="input-group__label main-font main-font--s" for="form-age">Возраст (лет):</label>
+            <input class="input-group__input-text main-font main-font--s" name="age" placeholder="7" type="text" id="form-age">
           </div>
         </fieldset>
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset form__fieldset--half">
           <div class="form__name input-group">
-            <label class="input-group__label" for="form-slim">Похудение</label>
             <input class="input-group__input-radio" name="program-type" type="radio" id="form-slim" value="Похудение" checked>
+            <label class="input-group__label main-font main-font--s" for="form-slim">Похудение</label>
           </div>
           <div class="form__name input-group">
-            <label class="input-group__label" for="form-mass">Набор массы</label>
             <input class="input-group__input-radio" name="program-type" type="radio" id="form-mass" value="Набор массы">
+            <label class="input-group__label main-font main-font--s" for="form-mass">Набор массы</label>
           </div>
           <div class="form__name input-group">
-            <label class="input-group__label" for="form-advice">Не знаю (Нужен ваш совет)</label>
             <input class="input-group__input-radio" name="program-type" type="radio" id="form-advice" value="Не знаю (Нужен ваш совет)">
+            <label class="input-group__label main-font main-font--s" for="form-advice">Не знаю (Нужен ваш совет)</label>
           </div>
         </fieldset>
-        <fieldset class="form__fieldset">
-          <legend class="form__title">Контактные данные (владельца кота)</legend>
+        <fieldset class="form__fieldset form__fieldset--contacts">
+          <legend class="form__title main-font main-font--m">Контактные данные (владельца кота)</legend>
           <div class="form__name input-group input-group--grey">
-            <label class="input-group__label" for="form-email">E-mail:*</label>
-            <input class="input-group__input-text" name="email" placeholder="kuklachev@gmail.com" type="text" id="form-email">
+            <label class="input-group__label main-font main-font--s" for="form-email">E-mail:*</label>
+            <input class="input-group__input-text main-font main-font--s" name="email" placeholder="kuklachev@gmail.com" type="text" id="form-email">
           </div>
           <div class="form__name input-group input-group--grey">
-            <label class="input-group__label" for="form-phone">Телефон:*</label>
-            <input class="input-group__input-text" name="phone" placeholder="8 (960) 900-60-90" type="text" id="form-phone">
+            <label class="input-group__label main-font main-font--s" for="form-phone">Телефон:*</label>
+            <input class="input-group__input-text main-font main-font--s" name="phone" placeholder="8 (960) 900-60-90" type="text" id="form-phone">
           </div>
         </fieldset>
-        <fieldset class="form__fieldset">
-          <legend class="form__title">Комментарий</legend>
-          <textarea name="comment" id="" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+        <fieldset class="form__fieldset form__fieldset--comment">
+          <legend class="form__title main-font main-font--m">Комментарий</legend>
+          <textarea class="form__comment" name="comment" id="" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
-        <fieldset class="form__fieldset">
-          <legend class="form__title">Дополнительно</legend>
+        <fieldset class="form__fieldset form__fieldset--additional">
+          <legend class="form__title main-font main-font--m">Дополнительно</legend>
           <div class="form__name input-group">
-            <label class="input-group__label" for="form-sweetener">Сахарозаменитель</label>
             <input class="input-group__input-checkbox" name="additional-products" type="checkbox" id="form-sweetener" value="Сахарозаменитель" checked>
+            <label class="input-group__label main-font main-font--s" for="form-sweetener">Сахарозаменитель</label>
           </div>
           <div class="form__name input-group">
-            <label class="input-group__label" for="form-water">Питьевая вода</label>
             <input class="input-group__input-checkbox" name="additional-products" type="checkbox" id="form-water" value="Питьевая вода">
+            <label class="input-group__label main-font main-font--s" for="form-water">Питьевая вода</label>
           </div>
           <div class="form__name input-group">
-            <label class="input-group__label" for="form-milk">Молоко</label>
             <input class="input-group__input-checkbox" name="additional-products" type="checkbox" id="form-milk" value="Молоко">
+            <label class="input-group__label main-font main-font--s" for="form-milk">Молоко</label>
           </div>
           <div class="form__name input-group">
-            <label class="input-group__label" for="form-vitamins">Витамины</label>
             <input class="input-group__input-checkbox" name="additional-products" type="checkbox" id="form-vitamins" value="Витамины">
+            <label class="input-group__label main-font main-font--s" for="form-vitamins">Витамины</label>
           </div>
         </fieldset>
         <button class="form__button button" type="submit">Отправить заявку</button>
+        <p class="form__footnote sub-font sub-font--m">* — Обязательные поля</p>
       </form>
     </main>
     <footer class="main-footer">
       <section class="main-footer__cooperation">
-        <h2 class="main-footer__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <address class="main-footer__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <h2 class="main-footer__title main-font main-font--s">Приглашаем к сотрудничеству дилеров!</h2>
+        <address class="main-footer__address sub-font sub-font--m">ул. Большая Конюшенная, д. 19/8 <span class="main-footer__address-city">Санкт-Петербург</span></address>
       </section>
       <div class="main-footer__map"></div>
       <section class="main-footer__contacts contacts">
         <h2 class="visually-hidden">Социальные сети</h2>
-        <a class="contacts__logo logo">
-          <img class="logo__text" src="img/logo-text-mobile.svg" width="101" height="18" alt="Кэт энерджи">
+        <a class="contacts__logo-text">
+          <img class="logo-text__svg" src="img/logo-text-mobile.svg" width="101" height="18" alt="Кэт энерджи">
         </a>
         <ul class="contacts__social-list">
           <li class="contacts__social-item">
