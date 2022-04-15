@@ -1,15 +1,30 @@
 .additional-products {
-  padding: 25px 20px 20px 20px;
+  padding: 25px 20px 0;
+}
+
+.additional-products__title {
+  padding-bottom: 36px;
+  line-height: 24px;
 }
 
 .additional-products__list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
+.additional-products__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 12px;
+  padding-bottom: 19px;
+}
+
 .additional-products__subtitle {
-  font-family: $font-oswald;
-  font-weight: 400;
-  font-size: 16px;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 13px;
   line-height: 16px;
   color: $color-dark-grey-2;
   text-transform: uppercase;
@@ -17,8 +32,80 @@
 
 .additional-products__description,
 .additional-products__price {
-  font-family: $font-arial;
-  font-size: 14px;
+  padding-bottom: 15px;
   line-height: 14px;
   color: $color-dark-grey;
+}
+
+.additional-products__button {
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .additional-products {
+    padding: 34px 30px 0;
+  }
+
+  .additional-products__title {
+    padding-bottom: 80px;
+    padding-left: 37px;
+    line-height: 36px;
+  }
+
+  .additional-products__item {
+    padding: 28px 38px;
+    align-items: center;
+  }
+
+  .additional-products__subtitle {
+    padding-bottom: 23px;
+    width: auto;
+    line-height: 20px;
+  }
+
+  .additional-products__description {
+    flex-grow: 1;
+    line-height: 14px;
+    text-align: right;
+  }
+
+  .additional-products__price {
+    width: 93px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    .additional-products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 76px 110px 86px;
+    }
+
+    .additional-products__title {
+      width: 100%;
+      padding-left: 0;
+    }
+
+    .additional-products__list {
+      flex-grow: 1;
+      margin-right: 80px;
+    }
+
+    .additional-products__item {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      padding: 16px 0;
+    }
+
+    .additional-products__price {
+      width: 156px;
+      padding-right: 38px;
+    }
+
+    .additional-products__button {
+      width: 244px;
+    }
+  }
 }

@@ -41,6 +41,11 @@
 
 @media (min-width: $desktop-width) {
   .navigation-list {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .navigation-list--white {
     color: $color-white;
   }
 }

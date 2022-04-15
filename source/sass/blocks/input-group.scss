@@ -1,6 +1,7 @@
 .input-group {
+  display: flex;
+  align-items: center;
   font-family: $font-oswald;
-  font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: $color-dark-grey-2;
@@ -8,13 +9,38 @@
   &--grey {
     color: $color-dark-grey;
   }
+
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+}
+
+.input-group__label {
+  flex-shrink: 0;
+  padding-right: 12px;
+  line-height: 18px;
+}
+
+.input-group__input-text {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13px 15px;
 }
 
 .input-group__input-text,
 .input-group__input-text::placeholder {
-  font-family: inherit;
-  font-size: inherit;
+  font: inherit;
   line-height: inherit;
   text-transform: inherit;
   color: inherit;
+}
+
+.input-group__input-radio {
+  margin: 0;
+  margin-right: 15px;
+}
+
+.input-group__input-checkbox {
+  margin: 0;
+  margin-right: 18px;
 }

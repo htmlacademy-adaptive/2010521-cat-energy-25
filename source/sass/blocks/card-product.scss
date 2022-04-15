@@ -1,19 +1,134 @@
 .card-product {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "img title"
+    "img desc"
+    "button button";
+  padding-top: 19px;
+  padding-bottom: 25px;
   list-style: none;
 }
 
+.card-product__title-link {
+  padding-bottom: 18px;
+  grid-area: title;
+  width: 75px;
+}
+
+.card-product__image-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: img;
+}
+
 .card-product__title {
-  font-weight: 400;
-  font-size: 16px;
   line-height: 20px;
   color: $color-dark-grey-2;
   text-transform: uppercase;
 }
 
-.card-product__description,
-.card-product__text {
-  font-family: $font-arial;
-  font-size: 12px;
+.card-product__description {
+  grid-area: desc;
+  display: grid;
+  grid-template-columns: 68px 72px;
+  margin-bottom: 22px;
   line-height: 16px;
   color: $color-dark-grey;
+}
+
+.card-product__description-definition {
+  margin: 0;
+  text-align: right;
+}
+
+.card-product__button {
+  grid-area: button;
+}
+
+.card-product--add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .card-product__title {
+    padding-bottom: 8px;
+  }
+
+  .card-product__text {
+    padding-bottom: 21px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .card-product {
+    grid-template-columns: none;
+    grid-template-areas:
+      "img"
+      "title"
+      "desc"
+      "button";
+    padding: 8px 36px 39px;
+    background: linear-gradient(to bottom, $color-white 81px, $color-grey 81px 100%);
+  }
+
+  .card-product__image-link {
+    padding-bottom: 34px;
+  }
+
+  .card-product__image {
+    width: 168px;
+    height: 200px;
+  }
+
+  .card-product__title-link {
+    width: 158px;
+    margin: 0 auto;
+    padding-bottom: 21px;
+    text-align: center;
+  }
+
+  .card-product__title {
+    line-height: 24px;
+  }
+
+  .card-product__description {
+    grid-template-columns: 126px 126px;
+    margin-bottom: 33px;
+    line-height: 30px;
+  }
+
+  .card-product--add {
+    justify-content: center;
+    text-align: center;
+    background: none;
+
+    .card-product__title {
+      padding-top: 234px;
+      padding-bottom: 23px;
+      width: 134px;
+      line-height: 22px;
+    }
+
+    .card-product__text {
+      padding-bottom: 86px;
+      width: 167px;
+      line-height: 18px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .card-product {
+    padding: 29px 36px 40px;
+  }
+
+  .card-product__image-link {
+    padding-bottom: 46px;
+  }
+
+  .card-product__description {
+    grid-template-columns: 86px 86px;
+  }
 }
