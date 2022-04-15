@@ -46,7 +46,6 @@
 @media (min-width: $desktop-width) {
   .form {
     display: grid;
-    // flex-wrap: wrap;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 80px;
     padding: 0 110px;
@@ -69,14 +68,4 @@
     grid-template-columns: repeat(4, 1fr);
     align-items: baseline;
   }
-
-  // .form__fieldset {
-  //   width: 100%;
-
-  //   &--half {
-  //     width: 50%;
-  //     // flex-grow: 1
-  //     // flex-basis: 50%;
-  //   }
-  // }
 }
