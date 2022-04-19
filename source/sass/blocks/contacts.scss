@@ -1,21 +1,66 @@
 .contacts {
+  background-color: $color-grey-400;
+}
+
+.contacts__container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 40px 20px 22px 20px;
-  background-color: $color-grey;
-}
 
-.contacts__social-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-@media (min-width: $tablet-width) {
-  .contacts {
+  @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
     padding: 58px 30px 55px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 58px 110px;
+  }
+}
+
+.contacts__logo-text {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-bottom: 32px;
+  border-bottom: 1px solid $color-grey-700;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.contacts__social-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 20px 0;
+  list-style: none;
+  border-bottom: 1px solid $color-grey-700;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    padding: 0;
+    border-bottom: none;
+  }
+}
+
+.contacts__copyright {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 22px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.copyright__link {
+  font-family: $font-arial;
+  font-size: 16px;
+  color: $color-grey;
 }

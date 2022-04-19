@@ -4,10 +4,10 @@
   font-family: $font-oswald;
   line-height: 18px;
   text-transform: uppercase;
-  color: $color-dark-grey-2;
+  color: $color-black-800;
 
   &--grey {
-    color: $color-dark-grey;
+    color: $color-grey;
   }
 
   &:not(:last-child) {

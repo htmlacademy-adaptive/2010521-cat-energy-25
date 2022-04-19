@@ -1,0 +1,89 @@
+.compare {
+  position: relative;
+  width: 280px;
+  height: 280px;
+}
+
+.compare__before,
+.compare__after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  background-color: #eaeaea;
+}
+
+.compare__control-radio--before:checked ~ .compare__before,
+.compare__control-radio--after:checked ~ .compare__after {
+  z-index: 1;
+  display: block;
+}
+
+.compare__control {
+  position: absolute;
+  bottom: 0;
+}
+
+.compare__control--before {
+  left: 35px;
+}
+
+.compare__control--after {
+  right: 35px;
+}
+
+.compare__control-radio {
+  position: absolute;
+  bottom: 5px;
+  width: 36px;
+  height: 6px;
+  margin: 0;
+  border-radius: 6px;
+}
+
+.compare__control-radio--before {
+  left: 103px;
+}
+
+.compare__control-radio--after {
+  right: 103px;
+}
+
+.compare__control-marks {
+  position: absolute;
+  bottom: 0;
+  left: 97px;
+  width: 86px;
+  height: 14px;
+  background-color: $color-white;
+  border-radius: 6px;
+  border: 1px solid #cdcdcd;
+}
+
+.compare__mark-radio {
+  position: absolute;
+  z-index: 1;
+  bottom: 5px;
+  width: 30px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: $color-white;
+}
+
+.compare__mark-radio--before {
+  left: 103px;
+}
+
+.compare__mark-radio--after {
+  right: 103px;
+}
+
+.compare__control-radio--before:checked ~ .compare__mark-radio--before {
+  width: 36px;
+  background-color: $color-green;
+}
+
+.compare__control-radio--after:checked ~ .compare__mark-radio--after {
+  width: 36px;
+  background-color: $color-green;
+}

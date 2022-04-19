@@ -1,5 +1,16 @@
 .about {
   padding: 10px 20px 49px 20px;
+
+  @media (min-width: $tablet-width) {
+    box-sizing: border-box;
+    padding: 0 30px 47px;
+    border-bottom: 1px solid $color-grey-600;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px 26px;
+    border-bottom: none;
+  }
 }
 
 .about__list {
@@ -7,25 +18,8 @@
   margin-top: 42px;
   padding: 0;
   list-style: none;
-}
 
-.about__list-item {
-  padding-bottom: 24px;
-}
-
-.about__list-item-text {
-  margin: 0;
-  width: 199px;
-  line-height: 18px;
-  color: $color-dark-grey;
-}
-
-@media (min-width: $tablet-width) {
-  .about {
-    padding: 0 30px 47px;
-  }
-
-  .about__list {
+  @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 249px);
     grid-template-rows: repeat(2, minmax(280px, 1fr));
@@ -33,32 +27,51 @@
     margin-top: 32px;
   }
 
-  .about__list-item {
-    position: relative;
-    padding-bottom: 0;
-  }
-
-  .about__list-item-text {
-    width: 223px;
-    padding-top: 151px;
-    line-height: 24px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .about {
-    padding: 0 110px 26px;
-  }
-
-  .about__list {
+  @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: minmax(280px, 1fr);
     column-gap: 75px;
   }
+}
 
-  .about__list-item-text {
+.about__list-item {
+  padding-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    padding-bottom: 0;
+  }
+}
+
+.about__list-item-text {
+  margin: 0;
+  width: 199px;
+  line-height: 18px;
+  color: $color-grey;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+    padding-top: 151px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
     width: 230px;
     padding-top: 151px;
+  }
+}
+
+.about__list-item-point {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 0;
+    left: 113px;
+    z-index: -1;
+    margin: 0;
+    font-family: inherit;
+    font-size: 280px;
+    line-height: 280px;
+    color: $color-grey-400;
   }
 }
