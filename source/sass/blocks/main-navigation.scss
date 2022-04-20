@@ -1,16 +1,12 @@
 .main-navigation {
   display: none;
   background-color: $color-white;
-}
 
-@media (min-width: $tablet-width) {
-  .main-navigation {
+  @media (min-width: $tablet-width) {
     display: block;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .main-navigation {
+  @media (min-width: $desktop-width) {
     background-color: transparent;
   }
 }
