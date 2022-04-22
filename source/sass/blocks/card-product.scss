@@ -1,19 +1,30 @@
 .card-product {
   display: grid;
+  box-sizing: border-box;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
     "img title"
     "img desc"
     "button button";
-  padding-top: 19px;
-  padding-bottom: 25px;
+  padding: 20px;
   list-style: none;
-}
+  border-bottom: 1px solid $color-grey-500;
 
-.card-product__title-link {
-  padding-bottom: 18px;
-  grid-area: title;
-  width: 75px;
+  @media (min-width: $tablet-width) {
+    grid-template-columns: none;
+    grid-template-areas:
+      "img"
+      "title"
+      "desc"
+      "button";
+    padding: 8px 36px 39px;
+    background: linear-gradient(to bottom, $color-white 81px, $color-grey-400 81px 100%);
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 29px 36px 40px;
+  }
 }
 
 .card-product__image-link {
@@ -21,21 +32,70 @@
   justify-content: center;
   align-items: center;
   grid-area: img;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 46px;
+  }
+}
+
+.card-product__image {
+  @media (min-width: $tablet-width) {
+    width: 168px;
+    height: 200px;
+  }
+}
+
+.card-product__title-link {
+  padding-bottom: 18px;
+  grid-area: title;
+  width: 75px;
+
+  @media (min-width: $tablet-width) {
+    width: 158px;
+    margin: 0 auto;
+    padding-bottom: 21px;
+    text-align: center;
+  }
 }
 
 .card-product__title {
   line-height: 20px;
   color: $color-black-800;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    line-height: 24px;
+  }
 }
 
 .card-product__description {
   grid-area: desc;
-  display: grid;
-  grid-template-columns: 68px 72px;
   margin-bottom: 22px;
   line-height: 16px;
   color: $color-grey;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 126px 126px;
+    margin-bottom: 33px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 86px 86px;
+  }
+}
+
+.card-product__description-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: 1px solid $color-grey-900;
+  }
 }
 
 .card-product__description-definition {
@@ -51,84 +111,39 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 78px;
+  background-image: url("../img/icon/icon-plus.svg");
+  background-repeat: no-repeat;
+  background-position: center 25px;
 
-  .card-product__title {
-    padding-bottom: 8px;
-  }
-
-  .card-product__text {
-    padding-bottom: 21px;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .card-product {
-    grid-template-columns: none;
-    grid-template-areas:
-      "img"
-      "title"
-      "desc"
-      "button";
-    padding: 8px 36px 39px;
-    background: linear-gradient(to bottom, $color-white 81px, $color-grey 81px 100%);
-  }
-
-  .card-product__image-link {
-    padding-bottom: 34px;
-  }
-
-  .card-product__image {
-    width: 168px;
-    height: 200px;
-  }
-
-  .card-product__title-link {
-    width: 158px;
-    margin: 0 auto;
-    padding-bottom: 21px;
-    text-align: center;
-  }
-
-  .card-product__title {
-    line-height: 24px;
-  }
-
-  .card-product__description {
-    grid-template-columns: 126px 126px;
-    margin-bottom: 33px;
-    line-height: 30px;
-  }
-
-  .card-product--add {
+  @media (min-width: $tablet-width) {
     justify-content: center;
+    padding-top: 161px;
+    margin-top: 82px;
     text-align: center;
-    background: none;
-
-    .card-product__title {
-      padding-top: 234px;
-      padding-bottom: 23px;
-      width: 134px;
-      line-height: 22px;
-    }
-
-    .card-product__text {
-      padding-bottom: 86px;
-      width: 167px;
-      line-height: 18px;
-    }
+    background-size: 60px;
+    background-position-y: 52px;
+    border: 2px solid $color-grey-400;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .card-product {
-    padding: 29px 36px 40px;
-  }
+.card-product--add .card-product__title {
+  padding-bottom: 8px;
 
-  .card-product__image-link {
-    padding-bottom: 46px;
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    padding-bottom: 23px;
+    width: 134px;
+    line-height: 22px;
   }
+}
 
-  .card-product__description {
-    grid-template-columns: 86px 86px;
+.card-product--add .card-product__text {
+  padding-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 86px;
+    width: 167px;
+    line-height: 18px;
   }
 }

@@ -47,3 +47,21 @@
     color: $color-white;
   }
 }
+
+.navigation-list__item {
+  @media (min-width: $tablet-width) {
+    &--active {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -8px;
+        left: 0;
+        height: 2px;
+        background: $color-green;
+      }
+    }
+  }
+}

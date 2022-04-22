@@ -12,4 +12,9 @@
   text-transform: uppercase;
   color: $color-white;
   background-color: $color-green;
+
+  &--grey {
+    color: $color-grey;
+    background-color: $color-grey-400;
+  }
 }
