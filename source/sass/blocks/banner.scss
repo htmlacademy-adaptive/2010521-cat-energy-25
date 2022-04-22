@@ -3,6 +3,14 @@
   flex-direction: column;
   box-sizing: border-box;
   padding: 35px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 70px 0 76px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .banner__container {
@@ -23,6 +31,16 @@
     background-color: $color-green;
     opacity: 0.85;
   }
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    min-height: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    height: 290px;
+  }
 }
 
 .banner__text {
@@ -34,33 +52,10 @@
   line-height: 20px;
   color: $color-white;
   text-align: center;
-}
 
-@media (min-width: $tablet-width) {
-  .banner {
-    padding: 70px 0 76px;
-  }
-
-  .banner__container {
-    justify-content: flex-end;
-    min-height: 200px;
-  }
-
-  .banner__text {
+  @media (min-width: $tablet-width) {
     margin-top: 70px;
     margin-right: 124px;
     text-align: left;
-  }
-}
-
-
-@media (min-width: $desktop-width) {
-  .banner {
-    padding: 0;
-  }
-
-  .banner__container {
-    width: 245px;
-    height: 290px;
   }
 }
