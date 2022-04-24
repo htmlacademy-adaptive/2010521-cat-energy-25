@@ -9,10 +9,6 @@
   &--grey {
     color: $color-grey;
   }
-
-  &:not(:last-child) {
-    margin-bottom: 14px;
-  }
 }
 
 .input-group__label {
@@ -24,7 +20,16 @@
 .input-group__input-text {
   box-sizing: border-box;
   width: 100%;
-  padding: 13px 15px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  height: 45px;
+  border-radius: 0;
+  border: 1px solid $color-grey-600;
+
+  @media (min-width: $tablet-width) {
+    height: 52px;
+  }
 }
 
 .input-group__input-text,
@@ -36,11 +41,21 @@
 }
 
 .input-group__input-radio {
+  min-height: 30px;
   margin: 0;
   margin-right: 15px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 40px;
+  }
 }
 
 .input-group__input-checkbox {
+  min-height: 30px;
   margin: 0;
   margin-right: 18px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 40px;
+  }
 }

@@ -2,6 +2,12 @@
   margin: 0 auto;
 }
 
+.main-container--border-top {
+  @media (max-width: ($tablet-width - 1)) {
+    border-top: 1px solid $color-grey-700;
+  }
+}
+
 .main-container__title {
   padding: 27px 20px 37px;
   line-height: 36px;
@@ -9,6 +15,7 @@
   @media (min-width: $tablet-width) {
     padding: 64px 70px 54px;
     line-height: 60px;
+    border-top: none;
   }
 
   @media (min-width: $desktop-width) {
