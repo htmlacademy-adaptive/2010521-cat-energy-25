@@ -50,6 +50,24 @@
     height: 60px;
     left: 0;
     background-color: $color-green;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--leaf::before {
+    background-image: url("../img/icon/icon-leaf.svg");
+  }
+
+  &--tub::before {
+    background-image: url("../img/icon/icon-tub.svg");
+  }
+
+  &--eat::before {
+    background-image: url("../img/icon/icon-eat.svg");
+  }
+
+  &--alarm::before {
+    background-image: url("../img/icon/icon-alarm.svg");
   }
 
   @media (min-width: $tablet-width) {
