@@ -1,89 +1,191 @@
 .compare {
-  position: relative;
-  width: 280px;
-  height: 280px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  // background-color: $color-grey-500;
 }
 
-.compare__before,
-.compare__after {
+.compare__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  min-height: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 592px;
+    min-height: 576px;
+    margin-bottom: 56px;
+  }
+}
+
+.compare__pictures-container {
+  position: relative;
+  width: 100%;
+  height: 232px;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 511px;
+    margin-bottom: 25px;
+  }
+}
+
+.compare__picture {
   position: absolute;
   top: 0;
   left: 0;
-  display: none;
-  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  height: 100%;
+
+  &--before {
+    z-index: 1;
+    clip-path: inset(0 0 0 0);
+  }
+
+  &--after {
+    z-index: 0;
+    clip-path: inset(0 100% 0 0);
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 511px;
+    margin-bottom: 25px;
+
+    &--before {
+      z-index: 1;
+      clip-path: inset(0 55% 0 0);
+    }
+
+    &--after {
+      z-index: 0;
+      clip-path: inset(0 0 0 45%);
+    }
+  }
 }
 
-.compare__control-radio--before:checked ~ .compare__before,
-.compare__control-radio--after:checked ~ .compare__after {
-  z-index: 1;
+.compare__picture-img {
   display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.compare__controls-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 210px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
 .compare__control {
-  position: absolute;
-  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 49px;
+  min-height: 30px;
+  padding: 0;
+  font-family: $font-oswald;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    width: 70px;
+    min-height: 40px;
+  }
 }
 
-.compare__control--before {
-  left: 35px;
+.compare__control-text {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dotted #dcdcdc;
+  }
 }
 
-.compare__control--after {
-  right: 35px;
-}
-
-.compare__control-radio {
-  position: absolute;
-  bottom: 5px;
-  width: 36px;
-  height: 6px;
-  margin: 0;
-  border-radius: 6px;
-}
-
-.compare__control-radio--before {
-  left: 103px;
-}
-
-.compare__control-radio--after {
-  right: 103px;
-}
-
-.compare__control-marks {
-  position: absolute;
-  bottom: 0;
-  left: 97px;
+.compare__control-slider {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
   width: 86px;
   height: 14px;
+  padding: 0 5px;
   background-color: $color-white;
   border-radius: 6px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid $color-grey-900;
+
+  &--before {
+    justify-content: flex-start;
+  }
+
+  &--after {
+    justify-content: flex-end;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 426px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      height: 6px;
+      border-radius: 6px;
+      background-color: #dcdcdc;
+      transform: translateY(-50%);
+    }
+  }
 }
 
-.compare__mark-radio {
-  position: absolute;
-  z-index: 1;
-  bottom: 5px;
-  width: 30px;
+.compare__control-slider-mark {
+  width: 36px;
   height: 6px;
   border-radius: 6px;
-  background-color: $color-white;
-}
-
-.compare__mark-radio--before {
-  left: 103px;
-}
-
-.compare__mark-radio--after {
-  right: 103px;
-}
-
-.compare__control-radio--before:checked ~ .compare__mark-radio--before {
-  width: 36px;
   background-color: $color-green;
-}
 
-.compare__control-radio--after:checked ~ .compare__mark-radio--after {
-  width: 36px;
-  background-color: $color-green;
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: $color-white;
+    box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.16);
+    transform: translateX(-50%);
+
+    &::before {
+      content: "";
+      position: relative;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $color-green;
+    }
+  }
 }
