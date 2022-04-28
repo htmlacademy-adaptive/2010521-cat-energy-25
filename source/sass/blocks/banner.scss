@@ -18,9 +18,13 @@
   display: flex;
   justify-content: center;
   min-height: 290px;
-  background-image: url("../img/banner.png");
+  background-image: url("../img/banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/banner@2x.jpg");
+  }
 
   &::before {
     content: "";
@@ -35,11 +39,22 @@
   @media (min-width: $tablet-width) {
     justify-content: flex-end;
     min-height: 200px;
+    background-image: url("../img/banner-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/banner-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: 245px;
     height: 290px;
+    background-image: url("../img/banner.jpg");
+    background-position-x: -29px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/banner@2x.jpg");
+    }
   }
 }
 

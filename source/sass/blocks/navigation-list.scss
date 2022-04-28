@@ -48,20 +48,24 @@
   }
 }
 
-.navigation-list__item {
+.navigation-list__item--active {
   @media (min-width: $tablet-width) {
-    &--active {
-      position: relative;
+    position: relative;
 
-      &::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: -8px;
-        left: 0;
-        height: 2px;
-        background: $color-green;
-      }
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -8px;
+      left: 0;
+      height: 2px;
+      background: $color-green;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      background: $color-white;
     }
   }
 }

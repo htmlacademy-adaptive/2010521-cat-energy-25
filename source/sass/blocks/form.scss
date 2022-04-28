@@ -101,6 +101,7 @@
   text-transform: uppercase;
   border-radius: 0;
   border: 1px solid $color-grey-600;
+  resize: vertical;
 
   @media (min-width: $desktop-width) {
     width: 1220px;

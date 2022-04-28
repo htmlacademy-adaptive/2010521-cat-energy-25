@@ -25,6 +25,7 @@
     grid-template-rows: repeat(2, minmax(280px, 1fr));
     gap: 37px 135px;
     margin-top: 32px;
+    counter-reset: about;
   }
 
   @media (min-width: $desktop-width) {
@@ -36,11 +37,43 @@
 }
 
 .about__list-item {
+  display: flex;
+  align-items: center;
+  position: relative;
   padding-bottom: 24px;
+  padding-left: 80px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    left: 0;
+    background-color: $color-green;
+  }
 
   @media (min-width: $tablet-width) {
-    position: relative;
-    padding-bottom: 0;
+    padding: 151px 0 57px;
+    counter-increment: about;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      top: 40px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 113px;
+      z-index: -1;
+      margin: 0;
+      content: counter(about);
+      font-family: inherit;
+      font-size: 280px;
+      line-height: 280px;
+      color: $color-grey-400;
+    }
   }
 }
 
@@ -52,26 +85,10 @@
 
   @media (min-width: $tablet-width) {
     width: 223px;
-    padding-top: 151px;
     line-height: 24px;
   }
 
   @media (min-width: $desktop-width) {
     width: 230px;
-    padding-top: 151px;
-  }
-}
-
-.about__list-item-point {
-  @media (min-width: $tablet-width) {
-    position: absolute;
-    top: 0;
-    left: 113px;
-    z-index: -1;
-    margin: 0;
-    font-family: inherit;
-    font-size: 280px;
-    line-height: 280px;
-    color: $color-grey-400;
   }
 }
