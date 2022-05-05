@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 35px 0;
+  padding: 15px 0 35px;
 
   @media (min-width: $tablet-width) {
-    padding: 70px 0 76px;
+    padding: 49px 0 76px;
   }
 
   @media (min-width: $desktop-width) {
@@ -36,6 +36,25 @@
     opacity: 0.85;
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 65px;
+    width: 58px;
+    height: 62px;
+    background-image: url("../img/icon/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: $tablet-width) {
+      left: 88px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: unset;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     justify-content: flex-end;
     min-height: 200px;
@@ -47,6 +66,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: center;
     width: 245px;
     height: 290px;
     background-image: url("../img/banner.jpg");
@@ -63,7 +84,7 @@
   z-index: 1;
   width: 161px;
   margin: 0;
-  margin-top: 186px;
+  margin-top: 187px;
   line-height: 20px;
   color: $color-white;
   text-align: center;
@@ -72,5 +93,12 @@
     margin-top: 70px;
     margin-right: 124px;
     text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+    margin-top: auto;
+    margin-bottom: 42px;
+    text-align: center;
   }
 }

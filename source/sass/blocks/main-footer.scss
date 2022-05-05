@@ -28,7 +28,7 @@
   @media (min-width: $tablet-width) {
     justify-content: space-between;
     width: 768px;
-    padding: 56px 70px;
+    padding: 60px 70px;
   }
 
   @media (min-width: $desktop-width) {
@@ -58,7 +58,7 @@
 
   @media (min-width: $tablet-width) {
     width: 163px;
-    line-height: 23px;
+    line-height: 26px;
   }
 
   @media (min-width: $desktop-width) {
@@ -74,12 +74,13 @@
 
   @media (min-width: $tablet-width) {
     width: 163px;
-    line-height: 24px;
+    line-height: 20px;
+    text-align: right;
   }
 }
 
 .main-footer__address-city {
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     display: inline-block;
     padding-top: 20px;
   }

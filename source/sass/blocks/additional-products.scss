@@ -8,7 +8,7 @@
 
 .additional-products__title {
   position: relative;
-  margin: 25px 0 36px;
+  margin: 24px 0 35px;
   line-height: 24px;
 
   &::before {
@@ -23,7 +23,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 80px;
+    margin: 28px 0 80px;
 
     &::before {
       top: 22px;
@@ -33,7 +33,7 @@
   @media (min-width: $desktop-width) {
     box-sizing: border-box;
     width: 100%;
-    margin-top: 76px;
+    margin-top: 72px;
   }
 }
 
@@ -96,7 +96,11 @@
   list-style: none;
 
   @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     flex-grow: 1;
+    min-height: 290px;
     padding: 0 0 86px;
     margin-right: 80px;
   }
@@ -116,15 +120,20 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 28px 38px;
+    padding: 27px 38px;
     align-items: center;
     border-left: 1px solid $color-grey-900;
     border-right: 1px solid $color-grey-900;
   }
 
   @media (min-width: $desktop-width) {
-    flex-wrap: nowrap;
-    padding: 16px 0;
+    display: grid;
+    grid-template-columns: 324px 244px 82px auto;
+    justify-content: start;
+    align-items: baseline;
+    min-height: 72px;
+    padding: 0;
+    padding-top: 17px;
     border-left: none;
     border-right: none;
   }
@@ -139,9 +148,13 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 23px;
+    padding-bottom: 24px;
     width: auto;
     line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
   }
 }
 
@@ -150,6 +163,10 @@
   padding-bottom: 15px;
   line-height: 14px;
   color: $color-grey;
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .additional-products__price {
@@ -159,8 +176,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 156px;
+    width: auto;
     padding-right: 38px;
+    text-align: left;
   }
 }
 
@@ -170,10 +188,20 @@
     line-height: 14px;
     text-align: right;
   }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
 }
 
 .additional-products__button {
   width: 100%;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
 
   @media (min-width: $desktop-width) {
     width: 244px;

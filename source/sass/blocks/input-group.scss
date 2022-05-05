@@ -1,4 +1,5 @@
 .input-group {
+  position: relative;
   display: flex;
   align-items: center;
   font-family: $font-oswald;
@@ -12,9 +13,27 @@
 }
 
 .input-group__label {
+  z-index: 2;
   flex-shrink: 0;
-  padding-right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 16px;
   line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 19px;
+  }
+}
+
+.input-group__label-contacts {
+  margin-right: 10px;
+  width: 68px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 18px;
+    width: 75px;
+  }
 }
 
 .input-group__input-text {
@@ -22,40 +41,166 @@
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 0 15px;
+  padding-left: 15px;
+  padding-right: 40px;
   height: 45px;
   border-radius: 0;
   border: 1px solid $color-grey-600;
 
+  &:hover {
+    outline: 1px solid $color-grey-900;
+  }
+
+  &:focus {
+    outline: 2px solid $color-grey;
+  }
+
+  &:invalid {
+    outline: 2px solid $color-error;
+  }
+
   @media (min-width: $tablet-width) {
     height: 52px;
+    padding: 10px 21px;
   }
+}
+
+.input-group__input-text:focus ~ .input-group__input-icon {
+  fill: $color-green;
+}
+
+.input-group__input-text:invalid ~ .input-group__input-icon {
+  fill: $color-error;
+}
+
+.input-group__input-icon {
+  position: absolute;
+  right: 16px;
 }
 
 .input-group__input-text,
 .input-group__input-text::placeholder {
   font: inherit;
+  font-size: 16px;
   line-height: inherit;
   text-transform: inherit;
   color: inherit;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 32px;
+  }
 }
 
 .input-group__input-radio {
-  min-height: 30px;
+  width: 30px;
+  height: 30px;
   margin: 0;
   margin-right: 15px;
+  outline-offset: 0;
 
   @media (min-width: $tablet-width) {
-    min-height: 40px;
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
   }
 }
 
-.input-group__input-checkbox {
-  min-height: 30px;
-  margin: 0;
-  margin-right: 18px;
+.input-group__input-radio-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: $color-white;
+  outline: 1px solid $color-grey-900;
 
   @media (min-width: $tablet-width) {
-    min-height: 40px;
+    width: 40px;
+    height: 40px;
   }
+}
+
+.input-group__input-radio:checked ~ .input-group__input-radio-checkmark::after {
+  content: "";
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: $color-green;
+
+  @media (min-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+
+.input-group:hover .input-group__input-radio-checkmark {
+  outline-color: #bababa;
+}
+
+.input-group__input-radio:disabled ~ .input-group__input-radio-checkmark::after,
+.input-group__input-radio:disabled ~ .input-group__label-name {
+  opacity: 0.3;
+}
+
+.input-group__input-checkbox {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  margin-right: 18px;
+  outline-offset: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.input-group__input-checkbox-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $color-grey-900;
+  background-color: $color-white;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.input-group__input-checkbox:checked ~ .input-group__input-checkbox-mark {
+  background-image: url("../img/icon/icon-check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.input-group__input-checkbox:disabled {
+  opacity: 0;
+}
+
+.input-group__input-checkbox:disabled ~ .input-group__input-checkbox-mark {
+  background-color: transparent;
+}
+
+.input-group__input-checkbox:disabled ~ .input-group__input-checkbox-mark,
+.input-group__input-checkbox:disabled ~ .input-group__label-name {
+  opacity: 0.3;
+}
+
+.input-group:hover .input-group__input-checkbox-mark {
+  border-color: #bababa;
 }

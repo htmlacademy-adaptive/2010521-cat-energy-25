@@ -12,7 +12,7 @@
   </head>
   <body class="page__body">
     <header class="main-header container">
-      <a class="main-header__logo logo">
+      <a class="main-header__logo logo" href="index.html">
         <picture>
           <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -96,7 +96,7 @@
             <a class="card-product__image-link" href="#">
               <picture>
                 <source media="(min-width: 768px)" srcset="img/catalog/card-tablet-desktop-3.png 1x, img/catalog/card-tablet-desktop-3@2x.png 2x">
-                <img class="card-product__image" src="img/catalog/card-mobile-3.png" srcset="img/catalog/card-mobile-3@2x.png" width="68" height="86" alt="Баночка корма Cat energy">
+                <img class="card-product__image" src="img/catalog/card-mobile-3.png" srcset="img/catalog/card-mobile-3@2x.png" width="68" height="78" alt="Баночка корма Cat energy">
               </picture>
             </a>
             <a class="card-product__title-link href="#">
@@ -148,7 +148,7 @@
             <a class="card-product__image-link" href="#">
               <picture>
                 <source media="(min-width: 768px)" srcset="img/catalog/card-tablet-desktop-5.png 1x, img/catalog/card-tablet-desktop-5@2x.png 2x">
-                <img class="card-product__image" src="img/catalog/card-mobile-5.png" srcset="img/catalog/card-mobile-5@2x.png" width="68" height="86" alt="Баночка корма Cat energy">
+                <img class="card-product__image" src="img/catalog/card-mobile-5.png" srcset="img/catalog/card-mobile-5@2x.png" width="68" height="78" alt="Баночка корма Cat energy">
               </picture>
             </a>
             <a class="card-product__title-link href="#">
@@ -273,7 +273,7 @@
     <footer class="main-footer">
       <section class="main-footer__cooperation main-footer__cooperation--bg-grey">
         <div class="main-footer__cooperation-wrapper">
-          <h2 class="main-footer__title main-font main-font--s">Приглашаем к сотрудничеству дилеров!</h2>
+          <h2 class="main-footer__title main-font main-font--s">Приглашаем <br>к сотрудничеству дилеров!</h2>
           <address class="main-footer__address sub-font sub-font--m">ул. Большая Конюшенная, д. 19/8 <span class="main-footer__address-city">Санкт-Петербург</span></address>
         </div>
         </section>
@@ -283,22 +283,44 @@
       <section class="main-footer__contacts contacts">
         <div class="contacts__container container">
           <h2 class="visually-hidden">Социальные сети</h2>
-          <a class="contacts__logo-text">
-            <img class="logo-text__svg" src="img/logo-text.svg" width="128" height="24" alt="Кэт энерджи">
+          <a class="contacts__logo-text" href="index.html">
+            <svg width="129" height="25" alt="Кэт энерджи">
+              <use href="./img/icon/sprite.svg#logo-text"></use>
+            </svg>
           </a>
           <ul class="contacts__social-list">
             <li class="contacts__social-item">
-              <a class="contacts__social-link contacts__social-link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+              <a class="contacts__social-link contacts__social-link--vkontakte" href="https://vk.com/htmlacademy">
+                <svg class="contacts__social-icon" width="28" height="22" fill="#666666">
+                  <use href="./img/icon/sprite.svg#icon-vk"></use>
+                </svg>
+                <span class="visually-hidden">Мы в Вконтакте</span>
+              </a>
             </li>
             <li class="contacts__social-item">
-              <a class="contacts__social-link contacts__social-link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в Ютубе</a>
+              <a class="contacts__social-link contacts__social-link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+                <svg class="contacts__social-icon" width="28" height="22" fill="#666666">
+                  <use href="./img/icon/sprite.svg#icon-youtube"></use>
+                </svg>
+                <span class="visually-hidden">Мы в Ютубе</span>
+              </a>
             </li>
             <li class="contacts__social-item">
-              <a class="contacts__social-link contacts__social-link--telegram" href="https://t.me/htmlacademy">Мы в Телеграме</a>
+              <a class="contacts__social-link contacts__social-link--telegram" href="https://t.me/htmlacademy">
+                <svg class="contacts__social-icon" width="28" height="22" fill="#666666">
+                  <use href="./img/icon/sprite.svg#icon-telegram"></use>
+                </svg>
+                <span class="visually-hidden">Мы в Телеграме</span>
+              </a>
             </li>
           </ul>
-          <div class="contacts__copyright copyright">
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <div class="contacts__copyright">
+            <a class="contacts__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+              <span class="contacts__copyright-name">HTML Academy</span>
+              <svg class="contacts__copyright-icon" width="27" height="34" fill="#666666">
+                <use href="./img/icon/sprite.svg#icon-html"></use>
+              </svg>
+            </a>
           </div>
         </div>
       </section>
