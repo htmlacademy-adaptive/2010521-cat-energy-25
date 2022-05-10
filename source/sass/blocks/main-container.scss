@@ -25,16 +25,16 @@
 }
 
 .main-container__text {
-  padding: 0 20px 16px;
+  padding: 0 20px 39px;
   line-height: 18px;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    padding: 0 70px 31px;
+    padding: 0 70px 66px;
     line-height: 30px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 110px 31px;
+    padding: 0 110px 66px;
   }
 }

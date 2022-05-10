@@ -38,7 +38,7 @@
 
   @media (min-width: $desktop-width) {
     padding: 225px 110px 0;
-    margin-top: -122px;
+    margin-top: -115px;
     margin-bottom: 82px;
     min-height: 694px;
     background-image: url("../img/background-cat-desktop.jpg");
@@ -134,5 +134,13 @@
   @media (min-width: $desktop-width) {
     top: -82px;
     left: 448px;
+  }
+}
+
+.intro__pick-up {
+  @media (min-width: $tablet-width) {
+    width: 244px;
+    height: 54px;
+    z-index: 1;
   }
 }

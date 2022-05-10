@@ -10,6 +10,18 @@
   }
 }
 
+.example__title {
+  line-height: 40px;
+
+  @media (min-width: $tablet-width) {
+    line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 43px;
+  }
+}
+
 .example__description {
   padding: 25px 20px 40px;
 
@@ -19,8 +31,8 @@
 
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: repeat(1fr);
-    padding: 43px 110px 0;
+    grid-template-rows: 251px 100px auto;
+    padding: 0 110px 0;
   }
 }
 
@@ -39,13 +51,13 @@
   @media (min-width: $desktop-width) {
     grid-column-start: 1;
     width: 436px;
-    margin-top: 146px;
+    margin-top: 0;
   }
 }
 
 .example__wrapper {
   padding-top: 20px;
-  padding-bottom: 34px;
+  padding-bottom: 38px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -57,6 +69,7 @@
   @media (min-width: $desktop-width) {
     grid-column-start: 1;
     flex-wrap: wrap;
+    padding: 0;
   }
 }
 
@@ -71,12 +84,13 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 69px;
+    padding-top: 63px;
   }
 }
 
 .example__result-item {
   position: relative;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,21 +107,22 @@
 
 .example__result-title {
   position: absolute;
-  top: 46px;
+  top: 45px;
   box-sizing: border-box;
   width: 87px;
-  padding: 4px 6px 0;
+  padding: 0 4px;
   font-family: $font-arial;
   font-size: 12px;
   line-height: 100%;
   text-align: center;
+  text-transform: lowercase;
   color: $color-grey;
   background-color: $color-grey-500;
 
   @media (min-width: $tablet-width) {
     top: 63px;
     width: auto;
-    padding: 4px 8px 0;
+    padding: 1px 8px 0;
     font-size: 14px;
     line-height: 100%;
     background-color: $color-white;
@@ -120,6 +135,7 @@
 
 .example__result-data {
   margin: 0;
+  margin-top: -1px;
   font-size: 24px;
   line-height: 24px;
 
@@ -130,23 +146,50 @@
   }
 }
 
-.example__price {
-  padding-top: 40px;
-  text-align: center;
+.example__outlay {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding-top: 34px;
+  line-height: 20px;
+  white-space: pre-wrap;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+    padding-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.example__text-price {
   line-height: 20px;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    width: 175px;
-    display: flex;
-    align-items: center;
-    padding: 0;
+    padding-bottom: 9px;
     text-align: right;
     line-height: 20px;
+    white-space: nowrap;
   }
 
   @media (min-width: $desktop-width) {
-    width: 100%;
+    padding-right: 63px;
+    text-align: left;
+  }
+}
+
+.example__price {
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
   }
 }
 

@@ -20,13 +20,33 @@
   }
 }
 
+.main-header__logo-image {
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 175px;
+    height: 51px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+    height: 59px;
+  }
+}
+
 .main-header__menu-toggle {
   width: 24px;
   height: 18px;
   padding: 0;
   border: none;
   background-color: transparent;
-  background-image: url("../img/menu-burger.svg");
+  background-image: url("../img/icon/menu-burger.svg");
 
   @media (min-width: $tablet-width) {
     display: none;
