@@ -106,6 +106,7 @@
   text-transform: uppercase;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     align-items: flex-end;

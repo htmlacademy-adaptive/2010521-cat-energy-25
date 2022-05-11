@@ -3,3 +3,25 @@
   align-items: center;
   flex-grow: 1;
 }
+
+.logo__image {
+  @media (min-width: $tablet-width) {
+    width: 175px;
+    height: 51px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+    height: 59px;
+  }
+}
+
+.logo[href] .logo__image {
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+}
