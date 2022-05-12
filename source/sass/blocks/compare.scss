@@ -31,10 +31,10 @@
 
   @media (min-width: $tablet-width) {
     min-height: 511px;
-    margin-bottom: 29px;
+    margin-bottom: 25px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     margin-bottom: 25px;
   }
 }
@@ -61,7 +61,7 @@
 
   @media (min-width: $tablet-width) {
     min-height: 511px;
-    margin-bottom: 25px;
+    margin-bottom: 21px;
 
     &--before {
       z-index: 1;
@@ -112,6 +112,10 @@
     align-items: flex-end;
     width: 70px;
     min-height: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 30px;
   }
 }
 
@@ -182,6 +186,12 @@
       background-color: #dcdcdc;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      top: 18px;
+    }
+  }
 }
 
 .compare__control-slider-mark {
@@ -205,6 +215,10 @@
     background-color: $color-white;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
     transform: translateX(-50%);
+
+    @media (min-width: $desktop-width) {
+      top: 5px;
+    }
 
     &:hover {
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19);
