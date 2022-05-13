@@ -167,6 +167,7 @@
   background-image: url("../img/icon/icon-arrow.svg");
   background-repeat: no-repeat;
   background-position: right 10px center;
+  transition: all 0.3s ease-out 0s;
 
   &:hover {
     background-image: url("../img/icon/icon-arrow-hover.svg");

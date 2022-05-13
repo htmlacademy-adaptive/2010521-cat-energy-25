@@ -15,6 +15,7 @@
     left: 50%;
     width: 1220px;
     transform: translateX(-50%);
+    z-index: 1;
   }
 }
 
@@ -36,7 +37,7 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 87px;
     width: 565px;
-    padding: 56px 80px;
+    padding: 59px 80px;
     margin: 0;
     background-color: $color-white;
   }
@@ -76,6 +77,10 @@
     width: 163px;
     line-height: 20px;
     text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
   }
 }
 
@@ -124,7 +129,7 @@
     background-image: url("../img/map-desktop.jpg");
 
     &::after {
-      left: 908px;
+      left: 947px;
       top: 131px;
     }
   }
