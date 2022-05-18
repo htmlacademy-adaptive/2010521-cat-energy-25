@@ -40,15 +40,14 @@
     padding: 225px 110px 0;
     margin-top: -115px;
     margin-bottom: 84px;
-    min-height: 694px;
+    min-height: 696px;
     background-image: url("../img/background-cat-desktop.jpg");
     background-repeat: no-repeat;
-    background-size: 720px 694px;
+    background-size: 50%;
     background-position: right top;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background-cat-desktop@2x.jpg");
-      background-size: 720px auto;
     }
 
     &::before {
@@ -57,7 +56,7 @@
       bottom: unset;
       right: 0;
       display: block;
-      width: 720px;
+      width: 50%;
       height: 696px;
       background-color: $color-green;
       opacity: 0.85;
@@ -71,6 +70,22 @@
       top: 143px;
       right: 330px;
     }
+  }
+}
+
+.intro__container {
+  width: 100%;
+  max-width: 320px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    max-width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1220px;
   }
 }
 
