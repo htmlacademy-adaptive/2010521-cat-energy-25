@@ -31,7 +31,8 @@
 
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-rows: 251px 100px auto;
+    grid-template-rows: 251px minmax(100px, auto) auto;
+    align-items: start;
     padding: 0 110px 0;
   }
 }
@@ -84,7 +85,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 63px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
@@ -161,6 +163,7 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
+    padding-bottom: 75px;
   }
 }
 
@@ -177,6 +180,7 @@
 
   @media (min-width: $desktop-width) {
     padding-right: 66px;
+    padding-bottom: 0;
     text-align: left;
   }
 }
