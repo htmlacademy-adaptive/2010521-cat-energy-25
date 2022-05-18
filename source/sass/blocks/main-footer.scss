@@ -11,7 +11,7 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: 95px;
+    top: 93px;
     left: 50%;
     width: 1220px;
     transform: translateX(-50%);
@@ -93,7 +93,7 @@
 
 .main-footer__map {
   position: relative;
-  min-width: 320px;
+  min-width: 100%;
   height: 362px;
   background-image: url("../img/map-mobile.jpg");
   background-repeat: no-repeat;
