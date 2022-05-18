@@ -55,14 +55,30 @@
   }
 }
 
+.main-header--nojs {
+  @media (max-width: ($tablet-width - 1)) {
+    padding: 0;
+    flex-wrap: wrap;
+  }
+}
+
 .main-header--nojs .main-header__menu-toggle {
   display: none;
 }
 
 .main-header--nojs .main-header__navigation {
-  display: block;
+  @media (max-width: ($tablet-width - 1)) {
+    position: static;
+    display: block;
+    flex-grow: 1;
+  }
 }
 
+.main-header--nojs .main-header__logo {
+  @media (max-width: ($tablet-width - 1)) {
+    padding: 10px 20px 17px;
+  }
+}
 
 .main-header--menu-opened .main-header__navigation {
   display: block;

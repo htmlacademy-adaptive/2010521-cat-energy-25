@@ -42,7 +42,7 @@ const html = () => {
 const scripts = () => {
   return gulp.src('source/js/script.js')
     .pipe(terser())
-    .pipe(rename("script.min.js"))
+    .pipe(rename('script.min.js'))
     .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
 }
@@ -98,6 +98,7 @@ const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
     'source/*.ico',
+    'source/*.webmanifest',
   ], {
     base: 'source'
   })
